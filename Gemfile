@@ -48,9 +48,12 @@ end
 
 gem 'sshkit', '~> 1.3.0'
 
-gem 'nokogiri'
+
 gem 'httparty'
 
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-rails'
+
+
+gem 'devise'

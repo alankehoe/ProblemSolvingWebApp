@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
+    'myNav.directives',
   'myApp.controllers',
   'ui.bootstrap',
   'n3-pie-chart',
@@ -14,6 +15,9 @@ angular.module('myApp', [
   'ngAnimate'
 ]).
 config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl1'});
-        $routeProvider.otherwise({redirectTo: '/'});
+
+        $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'MyCtrl1'});
+        $routeProvider.when('/sign_in', {templateUrl: 'partials/ .html', controller: 'MyCtrl1'});
+        $routeProvider.when('/create_account', {templateUrl: 'partials/create_account.html', controller: 'MyCtrl1'});
+        $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'MyCtrl1'});
 }]);

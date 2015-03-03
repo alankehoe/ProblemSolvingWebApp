@@ -1,6 +1,8 @@
 CA4002::Application.routes.draw do
+  resources :posts
+
+  devise_for :users
   namespace :api do
-    resources :stocks, only: [:index, :show, :create]
-    resources :feeds, only: [:index, :show, :create]
+  resources :users, :defaults => { :format => 'xml' }
   end
 end
