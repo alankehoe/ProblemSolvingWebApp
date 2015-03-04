@@ -17,7 +17,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'MyCtrl1'});
-        $routeProvider.when('/sign_in', {templateUrl: 'partials/ .html', controller: 'MyCtrl1'});
-        $routeProvider.when('/create_account', {templateUrl: 'partials/create_account.html', controller: 'MyCtrl1'});
-        $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'MyCtrl1'});
+        $routeProvider.when('/sign_in', {templateUrl: 'partials/sign_in.html', controller: 'LoginCtrl'});
+        $routeProvider.when('/create_account', {templateUrl: 'partials/create_account.html', controller: 'RegisterCtrl'});
 }]);

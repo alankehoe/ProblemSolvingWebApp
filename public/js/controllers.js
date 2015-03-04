@@ -2,25 +2,27 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
- .controller('MyCtrl1', ['$scope','stockService',function($scope,stockService) {
+angular
+    .module('myApp.controllers', [])
 
-        $scope.title = "Create Account"
+    .controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
 
-        /*$scope.buttonClicked = function(){
-          $scope.title = "Bye bye"
+    }])
 
-            stockService.get("google", function(data){
-                $scope.data = data
-            })
-        };*/
+    .controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
+      $scope.title = "Create Account";
+      $scope.passwordPattern = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
 
-        /*$scope.email = {
-            example: 'me@example.com'
-        };*/
-        $scope.passwordPattern = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+      $scope.register = function () {
+        debugger;
+        $http({
+          url: '/users.json',
+          method: 'POST',
+          data: $scope.user
+        })
+      }
+    }]);
 
 
-  }]);
 
 
