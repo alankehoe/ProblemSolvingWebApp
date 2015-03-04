@@ -16,7 +16,7 @@ angular
       $scope.register = function () {
         debugger;
         $http({
-          url: '/users.json',
+          url: '/api/users.json',
           method: 'POST',
           data: $scope.user
         })
